@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Todos</title>
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"></script>
+
+        <script src="/app.js"></script>
+
+        <style>
+            body {
+                padding:30px; margin:0px auto; box-sizing:border-box; max-width:480px;
+                font-family: 'IBM Plex Sans', sans-serif; font-size:20px; line-height:1.5;
+            }
+            input[type="text"] {
+                border:0px; border-bottom:1px solid #ccc; width:100%;
+                font-family:inherit; font-size:inherit; outline:none; line-height:inherit;
+            }
+            input[type="checkbox"] {
+                display:inline-block; width:18px; height:18px; margin-right:12px;
+            }
+            .list {
+                margin-top:30px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <h2>Todos</h2>
+        <form><input type="text" id="newTodo" placeholder="Add a new todo..." /></form>
+        <div id="todos" class="list"></div>
+    </body>
+</html>
