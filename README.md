@@ -2,4 +2,5 @@
 
 Applications used to demonstrate Code Engine Service Binding functionality
 
-**gallery**: A simple photo gallery application which lists objects stored 
+- **[gallery](/gallery)**: A simple photo gallery app which lists JPGs stored in a IBM Cloud Object Storage bucket.
+- **[todo](/todo)**: A simple todo app which maintains state using IBM's Databases for MongoDB service.
