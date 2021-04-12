@@ -46,6 +46,13 @@ server.get("/pictureUrls", (req, res) => {
         res.status(500).send(err)
     });
 })
+server.get("/uploadSupport", (req, res) => {
+    if (!cosCredentials) return res.status(200).json({ uploads_supported: false })
+    if (cosCredentials.iam_role_crn && 
+        (cosCredentials.iam_role_crn.includes("Writer") || cosCredentials.iam_role_crn.includes("Manager"))
+    ) return res.status(200).json({ uploads_supported: true })
+    res.status(200).json({ uploads_supported: false })
+})
 
 // Setup frontend
 server.use(Express.static('public'))
